@@ -1,0 +1,246 @@
+/************************************************************
+  GLOBALS
+************************************************************/
+
+body {
+  max-width: 767px;
+  padding-bottom: 1em;
+}
+
+
+
+
+
+/************************************************************
+  NAVBAR
+************************************************************/
+
+nav .container-fluid {
+  background-color: white;
+}
+
+.navbar-brand img {
+  width: 70px;
+  position: relative;
+  bottom: 0.65em;
+}
+.bill-link {
+  width: 70px;
+  position: relative;
+  bottom: 0.65em;
+  margin-top: 0px
+}
+
+nav a {
+  text-decoration: none;
+  font-family: sans-serif;
+  font-size: 15px;
+  display: inline-block;
+  transition: .3s background-color;
+  background-color: white;
+  color: #999999;
+  padding:5px;
+  margin:-5px;
+  min-width: 12%;
+  text-align: center;
+}
+
+nav a:hover {
+  text-decoration: none;
+  color: #666666;
+  background-color: #e6e6e6;
+}
+ 
+nav a.active {
+  background-color: #e6e6e6;
+  color: #666666;
+  cursor: default;
+}
+
+nav p {
+  color: #0078AD;
+  position: absolute;
+  right: 5px;
+  bottom: -2px;
+}
+
+/************************************************************
+  JUMBOTRON
+************************************************************/
+
+.jumbotron {
+  background-color: #0078AD;
+  color: white;
+}
+
+.jumbotron p {
+  font-size: 1em;
+}
+
+.jumbotron h1 {
+  position: relative;
+  bottom: 0.75em;
+}
+
+/************************************************************
+  SUBSCRIPTIONS
+************************************************************/
+
+#subscriptions-header {
+  background-color: #F4F4F4;
+  padding: 0.3em 0.4em;
+  color: #383838;
+}
+
+#subscriptions-total {
+  color: #0078AD;
+  background-color: #F4F4F4;
+}
+
+#subscriptions-total td {
+  padding-top: 2px;
+  padding-bottom: 2px;
+}
+
+/************************************************************
+  CALLS
+************************************************************/
+
+#calls-header {
+  background-color: #F4F4F4;
+  padding: 0.3em 0.4em;
+  color: #383838; 
+}
+
+#calls-total {
+  color: #0078AD;
+  background-color: #F4F4F4;
+}
+
+#calls-total td {
+  padding-top: 2px;
+  padding-bottom: 2px;
+}
+
+#calls-total td:last-child h4 {
+  position: relative;
+  left: 50%;
+}
+
+.show_hide {
+  font-size: 0.7em;
+  padding-top: 0.2em;
+}
+
+.show_hide:hover {
+  text-decoration: none;
+}
+
+/************************************************************
+  SKY STORE
+************************************************************/
+
+#sky-store-total {
+  color: #0078AD;
+  background-color: #F4F4F4;
+}
+
+#sky-store-total td {
+  padding-top: 2px;
+  padding-bottom: 2px;
+}
+
+.sky-store-buy-and-keep th:last-child {
+  text-align: right;
+  position: relative;
+  right: 27px;
+}
+
+.sky-store-buy-and-keep td:last-child {
+  text-align: right;
+  position: relative;
+  right: 27px;
+}
+
+/************************************************************
+  SKY STORE RENTALS
+************************************************************/
+
+#sky-store-rentals-header {
+  background-color: #F4F4F4;
+  padding: 0.3em 0.4em;
+  color: #383838;
+}
+
+
+
+
+
+/************************************************************
+  SKY STORE BUY & KEEP
+************************************************************/
+
+#sky-store-buy-and-keep-header {
+  background-color: #F4F4F4;
+  padding: 0.3em 0.4em;
+  color: #383838;
+}
+
+
+
+
+
+/************************************************************
+  MISC
+************************************************************/
+
+#generated-on {
+  color: #0078AD;
+}
+
+
+
+
+
+/************************************************************
+  MEDIA QUERIES
+************************************************************/
+
+@media only screen and (min-width: 590px) {
+  .billing-period p {
+    display: inline;
+  }
+
+  #calls-total td:last-child h4 {
+    left: 59%;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .jumbotron h1 {
+    bottom: 0.2em;
+  }
+
+  .jumbotron h4 {
+    font-size: 2em;
+    position: relative;
+    top: 1em;
+  }
+
+  .jumbotron p {
+    position: relative;
+    top: 1.5em;
+  }
+
+  .sky-store-buy-and-keep th:last-child {
+    text-align: right;
+    position: relative;
+    right: 45px;
+  }
+
+  .sky-store-buy-and-keep td:last-child {
+    text-align: right;
+    position: relative;
+    right: 45px;
+  }
+}

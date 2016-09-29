@@ -1,0 +1,131 @@
+<div class='jumbotron'>
+  <div class='row'>
+    <div class='col-xs-6'>
+      <h4>Total amount due</h4>
+      <p>due on: <%= @bill.statement["due"] %></p>
+    </div>
+    <div class='col-xs-6'>
+      <p class='pull-right'>Generated on: <%=@bill.statement['generated'] %></p>
+      <h1 class='pull-right'>£<%= @bill.total %></h1>
+    </div>
+  </div>
+</div>
+
+
+<hr>
+<section class='subscriptions'>
+  <h3 id='subscriptions-header'>Subscriptions</h3>
+  <table class='table'>
+    <tr>
+      <th class='small'>Package</th>
+      <th class='small'>Billing Period</th>
+      <th class='small'>Cost</th>
+    <tr>
+    <% @bill.package['subscriptions'].each do |subscription| %>
+      <tr>
+        <td><%= subscription["name"] %></td>
+        <td class='billing-period'>
+          <%= @bill.statement["period"]["from"] %> - 
+          <p><%= @bill.statement["period"]["to"] %></p>
+        </td>
+        <td><%= subscription["cost"] %></td>
+      <tr>
+    <% end %>
+    <tr id='subscriptions-total'>
+      <td>
+        <h4>Subscriptions total:</h4>
+      </td>
+      <td></td>
+      <td>
+        <h4><%= @bill.package["total"] %></h4>
+      </td>
+    <tr>
+  </table>
+</section>
+
+<hr>
+
+<section class='calls'>
+  <h3 id='calls-header'>
+    Calls
+    <a href="#" class="show_hide pull-right">+ see breakdown</a>
+  </h3>
+  <table class='table slidingDiv'>
+    <tr>
+      <th class='small'>Number</th>
+      <th class='small'>Duration</th>
+      <th class='small'>Cost</th>
+    <tr>
+    <% @bill.call_charge["calls"].each do |call| %>
+      <tr>
+        <td>Called <%= call["called"] %></td>
+        <td><%= call["duration"] %></td>
+        <td><%= call["cost"] %></td>
+      <tr>
+    <% end %>
+  </table>
+  <table class='table'>
+    <tr id='calls-total'>
+      <td>
+        <h4>Calls total:</h4>
+      </td>
+      <td></td>
+      <td>
+        <h4><%= @bill.call_charge["total"] %></h4>
+      </td>
+    <tr>
+  </table>
+</section>
+
+<hr>
+
+<section class='sky-store-rentals'>
+  <h3 id='sky-store-rentals-header'>Sky Store Rentals</h3>
+  <table class='table'>
+    <tr>
+      <th class='small'>Title</th>
+      <th class='small'>Billing Period</th>
+      <th class='small'>Cost</th>
+    <tr>
+    <% @bill.sky_store['rentals'].each do |rental| %>
+      <tr>
+        <td><%= rental["title"] %></td>
+        <td class='billing-period'>
+          <%= @bill.statement["period"]["from"] %> - 
+          <p><%= @bill.statement["period"]["to"] %></p>
+        </td>
+        <td><%= rental["cost"] %></td>
+      <tr>
+    <% end %>
+  </table>
+</section>
+
+<section class='sky-store-buy-and-keep'>
+  <h3 id='sky-store-buy-and-keep-header'>Sky Store Buy & Keep</h3>
+  <table class='table'>
+    <tr>
+      <th class='small'>Title</th>
+      <th class='small'>Billing Period</th>
+      <th class='small'>Cost</th>
+    <tr>
+    <% @bill.sky_store['buyAndKeep'].each do |purchase| %>
+      <tr>
+        <td><%= purchase["title"] %></td>
+        <td class='billing-period'>
+          <%= @bill.statement["period"]["from"] %> - 
+          <p><%= @bill.statement["period"]["to"] %></p>
+        </td>
+        <td><%= purchase["cost"] %></td>
+      <tr>
+    <% end %>
+    <tr id='sky-store-total'>
+      <td>
+        <h4>Sky Store total:</h4>
+      </td>
+      <td></td>
+      <td>
+        <h4><%= @bill.sky_store['total'] %></h4>
+      </td>
+    <tr>
+  </table>
+</section>
