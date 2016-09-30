@@ -12,8 +12,6 @@ I have decided to use Ruby & Sinatra as the test is for a Ruby developer positio
 
 It was built using TDD approach. The gem used for unit testing is miniTest.  
 
-
-
 To make the web page responsive I have used bootstrap.
 I have decided to use bootstrap because there is only one function written in Javascript and the function is written using jQuery. 
 
