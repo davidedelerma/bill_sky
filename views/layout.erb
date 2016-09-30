@@ -1,7 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-   
+   <meta charset="utf-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Sky Bill</title>
     <script src="//code.jquery.com/jquery-1.12.0.min.js"></script>
 
@@ -16,13 +18,25 @@
     <nav class="navbar navbar-default">
       <div class="container-fluid">
         <div class="navbar-header">
+        <button type="button" data-target="#navbarCollapse" data-toggle="collapse" class="navbar-toggle">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </button>
           <a class="navbar-brand" href="/">
             <img alt="Brand" src="sky-logo.png">
-          </a>
-          <a class='bill-link' href="/bill">Latest Bill</a>
+          </a>          
+        </div>
+        <div id="navbarCollapse" class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+            <li><a class='bill-link' href="/bill">Latest Bill</a></li>
+          </ul>
         </div>
       </div>
     </nav>   
+
+
     <%= yield %>
   </body>
 </html>

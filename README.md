@@ -8,13 +8,14 @@ gem install sinatra sinatra-contrib
 - go to (http://localhost:4567/bill) in your browser.  
 
 ###Technologies and Design Principles:   
-It has been built on Ruby & Sinatra as the test is for a Ruby developer position
+I have decided to use Ruby & Sinatra as the test is for a Ruby developer position
 
-It was built using TDD throughout. The gem used was was miniTest.  
+It was built using TDD approach. The gem used for unit testing is miniTest.  
 
-As always, the SOLID principles were kept in mind throughout and I strove for clean readable code.  
 
-The web page responsive I' ve used bootstrap
+
+To make the web page responsive I have used bootstrap.
+I have decided to use bootstrap because there is only one function written in Javascript and the function is written using jQuery. 
 
 # Bill unattended test
 

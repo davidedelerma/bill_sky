@@ -4,8 +4,9 @@
       <h4>Total amount due</h4>
       <p>due on: <%= @bill.statement["due"] %></p>
     </div>
-    <div class='col-xs-6'>
-      <p class='pull-right'>Generated on: <%=@bill.statement['generated'] %></p>
+    <div class='col-xs-6 '>
+      <p class="pull-right">Generated on: <%=@bill.statement['generated'] %></p>
+      <hr class="invisible">
       <h1 class='pull-right'>£<%= @bill.total %></h1>
     </div>
   </div>
