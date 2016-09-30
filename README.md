@@ -1,11 +1,11 @@
 
 ####To run locally:  
-gem install sinatra
-gem install minitest
-gem install minitest-rg  
+gem install sinatra  
+gem install minitest  
+gem install minitest-rg    
 gem install json         
 gem install sinatra sinatra-contrib
-- go to (http://localhost:4567/bill) in your browser.  
+- go to (http://localhost:4567/) in your browser.  
 
 ###Technologies and Design Principles:   
 As the test is for a Ruby developer position, I have decided to use Ruby & Sinatra 
