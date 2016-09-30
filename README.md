@@ -28,7 +28,7 @@ To display a customer's Sky bill
 * Complete the task in a language of your choice using whatever tools or frameworks that you want.
 * Must consume bill JSON from endpoint: 
 ```
-add website sadasdadsfsfsdfwerfdsfsdfs
+https://still-scrubland-9880.herokuapp.com/bill.json
 ```
 * JSON must be consumed by a server acting as a proxy.
 * Provide a README on how to run your app or, if you deploy it online, a URL to your app. 
