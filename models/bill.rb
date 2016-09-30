@@ -1,5 +1,3 @@
-require('pry-byebug')
-
 class Bill
 
   attr_reader(:statement,:total,:package,:call_charge,:sky_store)
