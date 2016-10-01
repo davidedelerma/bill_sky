@@ -7,7 +7,7 @@ gem install json
 gem install sinatra sinatra-contrib
 - go to (http://localhost:4567/) in your browser.  
 
-###Technologies and Design Principles:   
+###Technologies used:   
 As the test is for a Ruby developer position, I have decided to use Ruby & Sinatra 
 
 It was built using TDD approach. The gem used for unit testing is miniTest.  
@@ -17,7 +17,7 @@ I have decided to use bootstrap because there is only one function written in Ja
 
 ###Notes
 
-As the endpoint specified in the requirements was broken I have used as endpoint:
+As the endpoint specified in the requirements was broken, I have used as endpoint:
 ```
 https://still-scrubland-9880.herokuapp.com/bill.json
 ```
