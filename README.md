@@ -2,7 +2,8 @@
 ####To run locally:  
 gem install sinatra  
 gem install minitest  
-gem install minitest-rg    
+gem install minitest-rg  
+gem install rack-test    
 gem install json         
 gem install sinatra sinatra-contrib
 - go to (http://localhost:4567/) in your browser.  
@@ -10,8 +11,11 @@ gem install sinatra sinatra-contrib
 ###Technologies used:   
 As the test is for a Ruby developer position, I have decided to use Ruby & Sinatra 
 
-It was built using TDD approach. The gem used for unit testing is miniTest.  
-
+It was built using TDD approach. The gem used for unit testing the modules is miniTest.   
+To Run the test go in the folder ./models/spec and type in the terminal ruby bill_spec.rb and ruby get_bill_data_spec.rb  
+To test the Sinatra app I have used Rack  
+To run the Sinatra test in the folder ./spec type in the terminal ruby main_spec.rb                 
+ 
 To make the web page responsive I have used bootstrap.
 I have decided to use bootstrap because there is only one function written in Javascript and the function is written using jQuery. 
 

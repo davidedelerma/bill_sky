@@ -1,13 +1,13 @@
 require 'minitest/autorun'
 require 'minitest/rg'
-require_relative '../../db/get_bill_data'
+require_relative './bill_mock'
 require_relative '../bill'
 
 class TestBill < Minitest::Test
 
   def setup
-    data = Get_bill_data.fetch_data
-    @bill = Bill.new(data)
+    mock_data=BillMock.data
+    @bill = Bill.new(mock_data)
   end
 
   def test_can_get_total_amount_to_pay()
