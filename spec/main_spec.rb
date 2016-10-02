@@ -105,21 +105,22 @@ class SkyBillTest < Test::Unit::TestCase
       assert last_response.body.include?(call["cost"].to_s)  
     end
   end
+  
   def test_bill_page_sky_store_rentals_charges_are_visible
     get '/bill'
     assert last_response.ok?  
-    assert last_response.body.include?("Sky Store Rentals")  
-    assert last_response.body.include?("50 Shades of Grey")  
-    assert last_response.body.include?("4.99")  
+    @bill.sky_store['rentals'].each do |rental|
+      assert last_response.body.include?(rental["title"])  
+      assert last_response.body.include?(rental["cost"].to_s)  
+    end  
   end
 
   def test_bill_page_sky_store_buy_and_keep_titles_and_charges_are_visible 
     get '/bill'
     assert last_response.ok?
-    assert last_response.body.include?("Sky Store Rentals")  
-    assert last_response.body.include?("That's what she said")  
-    assert last_response.body.include?("9.99")  
-    assert last_response.body.include?("Brokeback mountain")  
+    @bill.sky_store['buyAndKeep'].each do |purchase|
+      assert last_response.body.include?(purchase["title"])  
+    end  
   end
 
   def test_bill_page_sky_store_total_charge_is_visible
